@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>登录</title>
+</head>
+<body>
+<h1 th:inline="text">登录</h1>
+<h1 th:inline="text" th:text="${modelTest}" ></h1>
+<form id="iform" th:action="@{/employee/find}" th:method="get" th:object="${employee}">
+    <label>ID</label>
+    <input type="text"  required = "required" th:field="${employee.id}"/>
+    <br/>
+    <label>编号</label>
+    <input type="text"  required = "required" th:field="${employee.no}"/>
+    <br/>
+    <label>密码</label>
+    <input type="text" required = "required" th:field="${employee.password}"/>
+    <br/>
+    <input th:label="登录" type="submit" value="登录"/>
+</form>
+</body>
+</html>

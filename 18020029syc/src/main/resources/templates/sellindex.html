@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<h1 th:inline="text">销售单</h1>
+<h1 th:inline="text" th:text="${modelTest}" ></h1>
+<form id="iform" th:action="@{/sell/insert}" th:method="post" th:object="${sell}">
+    <label>订单号</label>
+    <input type="text"  required = "required" th:field="${sell.no}"/>
+    <label>客户姓名</label>
+    <input type="text" required = "required" th:field="${sell.name}"/>
+    <label>商品</label>
+    <input type="text" required = "required" th:field="${sell.goodname}"/>
+    <label>数量</label>
+    <input type="text" required = "required" th:field="${sell.goodnum}"/>
+    <input th:label="提交" type="submit"/>
+</form>
+</body>
+</html>

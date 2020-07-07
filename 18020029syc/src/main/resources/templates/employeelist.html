@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sample</title>
+</head>
+<body>
+<h1 th:inline="text">账户 </h1>
+<table>
+    <!-- 名称 -->
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>序号</th>
+        <th>姓名</th>
+        <th>职位</th>
+        <th>密码</th>
+    </tr>
+
+    </thead>
+    <!-- 动态插入内容 -->
+    <tbody>
+    <tr th:each="s,iterStat : ${employeeList}" th:class="${iterStat.odd}? 'odd'">
+        <td th:text=" ${s.getId()}"></td>
+        　　
+        <td th:text=" ${s.getNo()}"></td>
+        　　
+        <td th:text=" ${s.getName()}"></td>
+        　　
+        <td th:text=" ${s.getPosition()}"></td>
+
+        <td th:text=" ${s.getPassword()}"></td>
+        <!--<td>-->
+        <!--<a th:href="@{/stu/update(id=${s.getId()})}">编辑</a>-->
+        <!--</td>-->
+        <!--</td>-->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
