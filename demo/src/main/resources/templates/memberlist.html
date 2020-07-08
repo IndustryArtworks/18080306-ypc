@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sample</title>
+</head>
+<body>
+<h1 th:inline="text">Sample</h1>
+<table>
+    <!-- 名称 -->
+    <thead>
+    <tr>
+        <th >id</th>
+        <th >no</th>
+        <th >name</th>
+
+
+    </tr>
+
+    </thead>
+    <!-- 动态插入内容 -->
+    <tbody>
+    <tr th:each="m : ${memberList}">
+        <!--            <td th:text=" ${eStat.index + 1}"></td>-->
+        <td th:text=" ${m.getId()}"></td>
+        　　<td th:text=" ${m.getNo()}"></td>
+        　　<td th:text=" ${m.getName()}"></td>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

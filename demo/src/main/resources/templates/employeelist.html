@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sample</title>
+</head>
+<body>
+<h1 th:inline="text">Sample</h1>
+<table>
+    <!-- 名称 -->
+    <thead>
+    <tr>
+        <th >id</th>
+        <th >no</th>
+        <th >name</th>
+        <th >position</th>
+        <th >password</th>
+
+    </tr>
+
+    </thead>
+    <!-- 动态插入内容 -->
+    <tbody>
+    <tr th:each="e : ${employeeList}">
+<!--            <td th:text=" ${eStat.index + 1}"></td>-->
+            <td th:text=" ${e.getId()}"></td>
+        　　<td th:text=" ${e.getNo()}"></td>
+        　　<td th:text=" ${e.getName()}"></td>
+        　　<td th:text=" ${e.getPosition()}"></td>
+            <td th:text=" ${e.getPassword()}"></td>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
