@@ -9,4 +9,6 @@ import java.util.List;
 public interface GoodsService {
     String insert(Goods goods);
     List<Goods> getAllGoods();
+    void updateGoods(Goods goods);
+    Goods getGoodsById(Integer id);
 }

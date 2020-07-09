@@ -23,4 +23,17 @@ public class GoodsServiceImpl implements GoodsService {
     public List<Goods> getAllGoods() {
         return goodsDAO.findAll();
     }
+
+    @Override
+    public void updateGoods(Goods goods) {
+
+        goodsDAO.save(goods);
+    }
+
+    @Override
+    public Goods getGoodsById(Integer id) {
+        return goodsDAO.findById(id).orElse(null);
+    }
+
+
 }

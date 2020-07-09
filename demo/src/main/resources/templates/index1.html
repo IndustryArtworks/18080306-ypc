@@ -5,7 +5,7 @@
     <title>Sample</title>
 </head>
 <body>
-<h1 th:inline="text">Insert Goods</h1>
+<h1 th:inline="text">退货</h1>
 <form id="iform" th:action="@{/goods/insert}" th:method="post" th:object="${goods}">
     <label>id</label>
     <input type="text" th:field="*{id}"/>
@@ -13,10 +13,12 @@
     <input type="text" th:field="*{no}"/>
     <label>商品名称</label>
     <input type="text" th:field="*{name}"/>
-    <label>描述</label>
+    <label>退货原因</label>
     <input type="text" th:field="*{description}"/>
     <label>价格</label>
     <input type="text" th:field="*{price}"/>
+    <label>数量</label>
+    <input type="text" th:field="*{storage}"/>
     <input th:label="提交" type="submit"/>
 </form>
 </body>

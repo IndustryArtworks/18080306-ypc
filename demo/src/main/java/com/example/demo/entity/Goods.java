@@ -58,4 +58,13 @@ public class Goods {
     private String name;
     private String description;
     private String price;
+    private Integer storage;
+
+    public Integer getStorage() {
+        return storage;
+    }
+
+    public void setStorage(Integer storage) {
+        this.storage = storage;
+    }
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -34,4 +35,6 @@ public class GoodsController {
         model.addAttribute("goodsList",goodsService.getAllGoods());
         return "goodslist";
     }
+
+
 }
