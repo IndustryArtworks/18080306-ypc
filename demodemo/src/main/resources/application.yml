@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: wenhao1999
+    url: jdbc:mysql://127.0.0.1:3306/stutest?serverTimezone=GMT
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF8
+
+  freemarker:
+    cache: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#server:
+#  port: 8080
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:object="${user}">
+    id： <p style="color: red" th:text="*{id}"></p>
+    no： <p style="color: red" th:text="*{no}"></p>
+    物品名称：<p style="color: red" th:text="*{name}"></p>
+    物品描述：<p style="color: red" th:text="*{description}"></p>
+    价格： <p style="color: red" th:text="*{price}"></p>
+    库存数量： <p style="color: red" th:text="*{number}"></p>
+</div>
+</body>
+</html>

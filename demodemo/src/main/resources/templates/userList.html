@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sample</title>
+</head>
+<body>
+<h1 th:inline="index">Sample</h1>
+<table>
+    <!-- 名称 -->
+    <thead>
+    <tr>
+        <th >id</th>
+        <th >编号</th>
+        <th >物品名称</th>
+        <th >物品描述</th>
+        <th >价格</th>
+        <th >库存数量</th>
+    </tr>
+
+    </thead>
+    <!-- 动态插入内容 -->
+    <tbody>
+    <tr th:each="s : ${user}">
+        <td th:text=" ${sStat.index + 1}"></td>
+        <td th:text=" ${s.getId()}"></td>
+        <td th:text=" ${s.getNo()}"></td>
+        <td th:text=" ${s.getName()}"></td>
+        <td th:text=" ${s.getDescription()}"></td>
+        <td th:text=" ${s.getPrice()}"></td>
+        <td th:text=" ${s.getNumber()}"></td>
+        <td>
+        <a th:href="@{'/user/update/' + ${s.getId()}}">修改</a>
+            <a th:href="@{'/user/delete/' + ${s.getId()}}">删除</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
